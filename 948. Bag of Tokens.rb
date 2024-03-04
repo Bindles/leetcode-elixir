@@ -38,7 +38,7 @@ def bag_of_tokens_score(tokens = [100,200,300,400], power = 200)
     end
     max
 end
-Bonus: crazy 1-liner:
+#ONELINER
 def bag_of_tokens_score(tokens, pow)
     score = 0 and tokens.sort!.size.times.map { pow >= tokens[0] ? (pow -= tokens.shift)*0 + score += 1 : ( pow += score>0 ? tokens.pop : 0 )*0 + score -= 1 }.push(0).max
 end
